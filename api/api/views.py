@@ -18,3 +18,7 @@ class CreateView(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         serializer.save()
 
+
+class DetailsView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Noticelist.objects.all()
+    serializer_class = NoticeSerializer
