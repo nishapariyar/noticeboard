@@ -6,10 +6,10 @@ from django.db import models
 # Create your models here.
 
 
-class Notices(models.Model):
+class Noticelist(models.Model):
     title = models.TextField(max_length=100)
-    notice = models.TextField(max_length=None)
-    date_expiry = models.DateTimeField()
+    notice_text = models.TextField(max_length=None)
+    date_expiry = models.DateField()
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
 
