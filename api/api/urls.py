@@ -5,7 +5,7 @@ from .views import CreateView
 
 urlpatterns = {
 
-    url(r'^noticelist/$', CreateView.as_view(), name="create"),
+    url(r'^notice/$', CreateView.as_view(), name="create"),
 }
 
 urlpatterns = format_suffix_patterns(urlpatterns)
