@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import Notices
+from .models import Noticelist
 
-class NoticesSerializer(serializers.ModelSerializer):
+class NoticeSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Notices
-        fields = ('id', 'title', 'notice', 'date_expiry', 'date_created', 'date_modified')
+        model = Noticelist
+        fields = ('id', 'title', 'notice_text', 'date_expiry', 'date_created', 'date_modified')
         read_only_fields = ('date_created', 'date_modified')
